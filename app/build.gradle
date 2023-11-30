@@ -1,0 +1,60 @@
+apply plugin: 'com.android.application'
+
+repositories {
+    mavenCentral()
+    jcenter()
+    maven { url "https://jitpack.io" }
+}
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.cityzen.cityzen"
+        minSdkVersion 16
+        targetSdkVersion 28
+        versionName "1.2.1"
+        versionCode 10200199
+
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    lintOptions {
+        abortOnError false
+        disable 'ExtraTranslation'
+        disable 'MissingTranslation'
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    //OAuth service and OSM API connection
+    implementation "androidx.appcompat:appcompat:1.0.2"
+    implementation "com.google.android.material:material:1.0.0"
+    implementation "androidx.recyclerview:recyclerview:1.0.0"
+    implementation "androidx.cardview:cardview:1.0.0"
+    implementation "androidx.vectordrawable:vectordrawable:1.0.1"
+    implementation "androidx.legacy:legacy-support-v4:1.0.0"
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+
+    implementation('de.westnordost:osmapi:3.3') {
+        exclude group: 'net.sf.kxml', module: 'kxml2' // already included in Android
+    }
+    implementation 'info.metadude.java.library.overpass:overpass-library:2.0.0'
+    implementation 'oauth.signpost:signpost-core:1.2.1.2'
+    implementation 'org.osmdroid:osmdroid-android:6.1.0'
+    implementation 'com.github.MKergall:osmbonuspack:6.6.0'
+    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation 'com.github.clans:fab:1.6.4'
+    implementation 'com.github.ittianyu:BottomNavigationViewEx:2.0.2'
+    implementation 'pub.devrel:easypermissions:3.0.0'
+    implementation 'io.github.rockerhieu:emojicon:1.4.2'
+    implementation 'com.squareup.retrofit2:retrofit:2.5.0'
+    testImplementation 'junit:junit:4.12'
+}
