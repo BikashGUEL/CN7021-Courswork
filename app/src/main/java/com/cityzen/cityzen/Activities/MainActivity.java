@@ -21,6 +21,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 
@@ -91,6 +92,8 @@ public class MainActivity extends AppCompatActivity
     private BottomNavigationViewEx navigation;
     private FloatingActionMenu floatingActionButton;
 
+    private Button tfl_btn;
+
     private TextView mTextMessage;
     private MapView mapView;
     private String TAG = "OPEN_STREET_MAP";
@@ -108,12 +111,22 @@ public class MainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         AppCompatDelegate.setCompatVectorFromResourcesEnabled(true);
         setContentView(R.layout.activity_main);
+
         //load last known location from SharedPreferences
         lastKnownLocation = new StorageUtil(this).getLastKnownLocation();
+        tfl_btn = findViewById(R.id.tfl_btn);
+
+        tfl_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this,MapViewActivity.class));
+            }
+        });
 
         if (lastKnownLocation == null) {
             registerReceiver(locationEnabledReceiver, new IntentFilter("LOCATION_ENABLED"));
         }
+
 
         //request permissions
         requestWriteExternalStoragePermission();
@@ -131,6 +144,8 @@ public class MainActivity extends AppCompatActivity
 //        AppLog.log(osm.getOAuth().getConsumerSecret());
 //        AppLog.log(osm.getOAuth().getRequestParameters());
 //        logUserInfo();
+
+
     }
 
     @Override

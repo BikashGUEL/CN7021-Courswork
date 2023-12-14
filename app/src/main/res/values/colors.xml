@@ -24,6 +24,7 @@
     <color name="category_mobile_phone_store">#7950F2</color>
     <color name="category_parking">#F783AC</color>
     <color name="category_pharmacy">#15AABF</color>
+    <color name="category_tfl">#2541B2</color>
     <color name="category_post_office">#FD7E14</color>
     <color name="category_restaurant">#3BC9DB</color>
     <color name="category_shopping_mall">#20C997</color>
@@ -31,6 +32,15 @@
     <color name="category_transportation">#B197FC</color>
     <color name="category_building">#20C997</color>
     <color name="category_undefined">#495057</color>
+    <color name="darkblue">#03256C</color>
+    <color name="LightBlue">#2541B2</color>
+    <color name="TFL">#2541B2</color>
+    <color name="DarkBlue">#03256C</color>
+    <color name="editbox">#EAE9E9</color>
+    <color name="marker">#FF3D00</color>
+    <color name="finalmarker">#67DA3E</color>
+    <color name="white">#FFFFFF</color>
+    <color name="text_black">#100F0F</color>
 
     <!-- further material design colors -->
     <color name="grey600">#757575</color>

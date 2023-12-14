@@ -15,6 +15,7 @@ import androidx.annotation.StringRes;
 public enum CategoryDisplayConfig {
     UNDEFINED(-1, R.string.Location, R.drawable.ic_map_marker, R.color.category_building),
     BAKERIES(0, R.string.Bakeries, R.drawable.ic_local_bakery, R.color.category_bakery),
+    TFL(1256, R.string.Transport_For_London, R.drawable.tfl, R.color.category_tfl),
     BARS(1, R.string.Bars_Clubs, R.drawable.ic_local_bar_white_24dp, R.color.category_bar),
     BIKE_RENTAL(2, R.string.RentBicycle, R.drawable.ic_local_bike, R.color.category_bike_rental),
     BUILDINGS(-2, R.string.Buildings, R.drawable.ic_local_city, R.color.category_building),
@@ -73,6 +74,7 @@ public enum CategoryDisplayConfig {
     FIREFIGHTER(-1034, R.string.Location, R.drawable.ic_local_fire_station, R.color.category_building),
     DENTIST(-1035, R.string.Location, R.drawable.ic_local_dentist, R.color.category_pharmacy),
     NIGHTCLUB(-1036, R.string.Location, R.drawable.ic_local_music, R.color.category_bar);
+
 
     private static final Map<Integer, CategoryDisplayConfig> reverseMap = new HashMap<>();
 

@@ -52,6 +52,7 @@ public abstract class CategoryColoringUtil {
         iconMapping.put("photo", CategoryDisplayConfig.PHOTO);
         iconMapping.put("jewelry", CategoryDisplayConfig.JEWELERY);
         iconMapping.put("nightclub", CategoryDisplayConfig.NIGHTCLUB);
+        iconMapping.put("tfl", CategoryDisplayConfig.TFL);
         iconMapping.put("convenience", CategoryDisplayConfig.CONVENIENCE);
         iconMapping.put("supermarket", CategoryDisplayConfig.SUPERMARKET);
         iconMapping.put("cinema", CategoryDisplayConfig.CINEMA);

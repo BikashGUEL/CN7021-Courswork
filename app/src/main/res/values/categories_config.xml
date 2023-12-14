@@ -22,6 +22,7 @@
     <integer name="category_id_shopping" translatable="false">15</integer>
     <integer name="category_id_tourism" translatable="false">16</integer>
     <integer name="category_id_transportation" translatable="false">17</integer>
+    <integer name="category_id_tfl" translatable="false">1256</integer>
 
     <!-- category order based on identifiers (from above) -->
     <array name="category_order" translatable="false">
@@ -48,5 +49,6 @@
         <item>@integer/category_id_tourism</item>
         <item>@integer/category_id_car_rental</item>
         <item>@integer/category_id_hotels</item>
+        <item>@integer/category_id_tfl</item>
     </array>
 </resources>
